@@ -5,16 +5,13 @@ import Image from "next/image";
 import Navlink from "./Navlink";
 export default function Navbar({}: Props) {
     return (
-        <div className="flex min-h-[1.5rem] max-w-full bg-black">
-            <div className="relative min-h-[1.75rem] min-w-[300px] m-[1.75rem]">
-                <Image
-                    alt=""
-                    src="/logo-white.svg"
-                    fill={true}
-                    className="object-contain"
-                />
+        <div className="z-10 relative flex items-center justify-between px-[1.5rem] md:px-[2.5rem] min-h-[1.5rem] max-w-full bg-black">
+            <div className="py-[1.75rem]">
+                <h3 className="text-white text-[2rem] font-bold">
+                    &#123;Fitsweet
+                </h3>
             </div>
-            <nav className="flex p-[1.75rem] w-full border-l-[1px] border-l-white/20">
+            <nav className="hidden xl:flex py-[0.75rem] px-[2rem] w-full border-l-[1px] border-l-white/20">
                 <ul className="flex justify-between items-center w-1/2 uppercase">
                     <li>
                         <Navlink label="Home" />
@@ -33,6 +30,13 @@ export default function Navbar({}: Props) {
                     </li>
                 </ul>
             </nav>
+            <div className="xl:hidden">
+                <button>
+                    <div className="p-[1px] w-[15px] bg-white"></div>
+                    <div className="p-[1px] w-[15px] my-[3px] bg-white"></div>
+                    <div className="p-[1px] w-[15px] bg-white"></div>
+                </button>
+            </div>
         </div>
     );
 }

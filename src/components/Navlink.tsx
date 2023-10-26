@@ -13,7 +13,10 @@ const Roboto = Roboto_Condensed({
 
 function Navlink({ label }: Props) {
     return (
-        <Link href="/About-Us" className={`text-white ${Roboto.className}`}>
+        <Link
+            href="/About-Us"
+            className={`py-[1rem] px-[1.5rem] text-white ${Roboto.className}`}
+        >
             {label}
         </Link>
     );
