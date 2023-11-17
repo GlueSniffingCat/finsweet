@@ -3,7 +3,8 @@ import { Roboto_Condensed } from "next/font/google";
 import React from "react";
 
 type Props = {
-    label: String;
+    label: string;
+    url: string;
 };
 const Roboto = Roboto_Condensed({
     weight: "400",
@@ -11,11 +12,11 @@ const Roboto = Roboto_Condensed({
     subsets: ["greek"],
 });
 
-function Navlink({ label }: Props) {
+function Navlink({ label, url }: Props) {
     return (
         <Link
-            href="/About-Us"
-            className={`py-[1rem] px-[1.5rem] text-white ${Roboto.className}`}
+            href={url}
+            className={`py-[1rem] px-[1.5rem] text-white/90 ${Roboto.className}`}
         >
             {label}
         </Link>
